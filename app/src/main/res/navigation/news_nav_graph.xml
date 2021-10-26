@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/news_nav_graph"
+    app:startDestination="@id/searchNewsFragment">
+
+    <fragment
+        android:id="@+id/searchNewsFragment"
+        android:name="com.yigithan.newsapp.newsapp.fragments.SearchNewsFragment"
+        android:label="Appcent NewsApp" >
+        <action
+            android:id="@+id/action_searchNewsFragment_to_detailNewsFragment2"
+            app:destination="@id/detailNewsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/favNewsFragment"
+        android:name="com.yigithan.newsapp.newsapp.fragments.FavNewsFragment"
+        android:label="Favorites" >
+        <action
+            android:id="@+id/action_favNewsFragment_to_detailNewsFragment2"
+            app:destination="@id/detailNewsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/sourceFragment"
+        android:name="com.yigithan.newsapp.newsapp.fragments.SourceFragment"
+        android:label="News Source" >
+        <argument
+            android:name="articlesource"
+            app:argType="com.yigithan.newsapp.models.Article" />
+    </fragment>
+    <fragment
+        android:id="@+id/detailNewsFragment"
+        android:name="com.yigithan.newsapp.newsapp.fragments.DetailNewsFragment"
+        android:label=" " >
+        <action
+            android:id="@+id/action_detailNewsFragment_to_sourceFragment2"
+            app:destination="@id/sourceFragment" />
+        <argument
+            android:name="article"
+            app:argType="com.yigithan.newsapp.models.Article" />
+    </fragment>
+</navigation>
