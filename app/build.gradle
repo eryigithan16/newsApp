@@ -35,6 +35,7 @@ android {
 
 dependencies {
 
+    implementation 'androidx.paging:paging-runtime:3.0.0-beta01'
     def roomVersion = '2.3.0'
 
     implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
