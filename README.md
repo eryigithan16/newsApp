@@ -1,5 +1,5 @@
 # News App
-Appcent News App
+News App
 
 ## Uygulamada Neler kullandım
 - OOP
